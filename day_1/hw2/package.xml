@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>hw2</name>
+  <version>0.0.0</version>
+  <description>ROS2 실습과제 2: launch 파일로 Publisher/Subscriber 동시 실행 + rqt_graph</description>
+  <maintainer email="lkh060320@gmail.com">lkh-ubuntu</maintainer>
+  <license>Apache-2.0</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <!-- C++ 노드 빌드/실행에 필요 -->
+  <depend>rclcpp</depend>
+  <depend>std_msgs</depend>
+
+  <!-- launch 파일 실행에 필요 -->
+  <exec_depend>ros2launch</exec_depend>
+  <exec_depend>launch_ros</exec_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

@@ -1,0 +1,10 @@
+# [실습과제 3 + 2p-1] 사칙연산 계산기 서비스
+# Request: 클라이언트 -> 서버
+float64 a
+float64 b
+string op
+---
+# Response: 서버 -> 클라이언트
+float64 result
+bool success
+string message
