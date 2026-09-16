@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package>
+  <name>day2_hw3</name>
+  <version>0.1.0</version>
+  <description>Qt GUI multi topic monitoring dashboard</description>
+  <maintainer email="author@mail.com">author</maintainer>
+  <author>author</author>
+  <license>BSD</license>
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+  <build_depend>rclcpp</build_depend>
+  <run_depend>rclcpp</run_depend>
+  <build_depend>std_msgs</build_depend>
+  <run_depend>std_msgs</run_depend>
+  <build_depend>std_srvs</build_depend>
+  <run_depend>std_srvs</run_depend>
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>
