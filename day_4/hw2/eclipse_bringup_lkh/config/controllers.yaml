@@ -1,0 +1,74 @@
+controller_manager:
+  ros__parameters:
+    update_rate: 100
+
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+    camera_tower_controller:
+      type: forward_command_controller/ForwardCommandController
+
+    arm_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+    gripper_controller:
+      type: forward_command_controller/ForwardCommandController
+
+    flipper_controller:
+      type: forward_command_controller/ForwardCommandController
+
+    diff_drive_controller:
+      type: diff_drive_controller/DiffDriveController
+
+camera_tower_controller:
+  ros__parameters:
+    joints:
+      - ct_joint1_1
+      - ct_joint2_1
+      - ct_joint1_2
+      - ct_joint2_2
+    interface_name: position
+
+arm_controller:
+  ros__parameters:
+    joints:
+      - arm_joint1
+      - arm_joint2
+      - arm_joint3
+      - arm_joint4
+      - arm_joint5
+      - arm_joint6
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+      - velocity
+
+gripper_controller:
+  ros__parameters:
+    joints:
+      - gripper_motor_ljoint
+      - gripper_motor_rjoint
+    interface_name: position
+
+flipper_controller:
+  ros__parameters:
+    joints:
+      - fl_joint
+      - fr_joint
+      - bl_joint
+      - br_joint
+    interface_name: position
+
+diff_drive_controller:
+  ros__parameters:
+    left_wheel_names:
+      - left_wheel_joint
+    right_wheel_names:
+      - right_wheel_joint
+    wheel_separation: 0.24
+    wheel_radius: 0.08
+    publish_rate: 50.0
+    base_frame_id: base_link
+    odom_frame_id: odom
+    enable_odom_tf: true
